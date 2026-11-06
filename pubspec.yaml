@@ -43,6 +43,11 @@ dependencies:
     # Misc.
     image_picker: ^1.2.4
     url_launcher: ^6.3.3
+    dartx: ^1.2.0
+    flutter_svg: ^2.3.2
+    change_case: ^2.2.0
+    cupertino_icons: ^2.0.0
+    material_ui: ^1.10.0
 
 dev_dependencies:
     flutter_test:
@@ -62,6 +67,27 @@ dev_dependencies:
 
 flutter:
     uses-material-design: true
+    generate: true
+    assets:
+        - assets/
+        - assets/images/
+        - assets/fonts/
+    fonts:
+        - family: Atkinson Hyperlegible
+          fonts:
+              - asset: assets/fonts/Atkinson Hyperlegible.ttf
+              - asset: assets/fonts/Atkinson Hyperlegible Italic.ttf
+                style: italic
+        - family: Bookerly
+          fonts:
+              - asset: assets/fonts/Bookerly.ttf
+              - asset: assets/fonts/Bookerly Italic.ttf
+                style: italic
+        - family: Vollkorn
+          fonts:
+              - asset: assets/fonts/Vollkorn.ttf
+              - asset: assets/fonts/Vollkorn Italic.ttf
+                style: italic
 
     # Bookerly is proprietary, so it isn't bundled. If you have a licence for it,
     # drop the files into assets/fonts/ and uncomment this block. Until then the
