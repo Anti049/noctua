@@ -1,0 +1,10 @@
+# Launcher icons for the stable flavor: dart run flutter_launcher_icons
+# Writes android/app/src/stable/res/mipmap-*; artwork lives in assets/branding/.
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: false
+  image_path: "assets/branding/icon_stable.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#1E1E2E"
+  adaptive_icon_foreground: "assets/branding/icon_foreground_stable.png"
+  adaptive_icon_monochrome: "assets/branding/icon_monochrome.png"

@@ -1,0 +1,111 @@
+name: noctua
+description: 'A new Flutter project.'
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+    sdk: ^3.13.5
+
+dependencies:
+    flutter:
+        sdk: flutter
+
+    # State
+    flutter_riverpod: ^3.4.3
+    riverpod_annotation: ^4.0.7
+
+    # Data: immutable models, local database, secure storage, and file system access
+    drift: ^2.35.3
+    drift_flutter: ^0.3.1
+    flutter_secure_storage: ^11.2.0
+    freezed_annotation: ^3.1.0
+    path_provider: ^2.1.6
+
+    # Navigation
+    auto_route: ^11.2.0
+
+    # Networking
+    dio: ^5.11.1
+
+    # Theming and appearance
+    dynamic_color: ^2.1.0
+    flex_color_scheme: ^9.0.0
+    flutter_native_splash: ^2.2.16
+    google_fonts: ^9.0.0
+    material_symbols_icons: ^4.2960.0
+    responsive_framework: ^1.5.1
+
+    # In-app updates and platform information
+    device_info_plus: ^13.3.0
+    ota_update: ^7.1.0
+    package_info_plus: ^10.2.2
+
+    # Misc.
+    image_picker: ^1.2.4
+    url_launcher: ^6.3.3
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^6.0.0
+
+    # Code generation
+    auto_route_generator: ^10.6.0
+    build_runner: ^2.16.1
+    drift_dev: ^2.35.2
+    freezed: ^4.0.1
+    riverpod_generator: ^4.0.9
+
+    # App identity
+    flutter_flavorizr: ^2.6.0
+    flutter_launcher_icons: ^0.14.4
+
+flutter:
+    uses-material-design: true
+
+    # Bookerly is proprietary, so it isn't bundled. If you have a licence for it,
+    # drop the files into assets/fonts/ and uncomment this block. Until then the
+    # reader falls back to Literata (from google_fonts).
+    # fonts:
+    #   - family: Bookerly
+    #     fonts:
+    #       - asset: assets/fonts/Bookerly-Regular.ttf
+    #       - asset: assets/fonts/Bookerly-Italic.ttf
+    #         style: italic
+    #       - asset: assets/fonts/Bookerly-Bold.ttf
+    #         weight: 700
+
+flavorizr:
+    app:
+        android:
+            flavorDimensions: 'channel'
+    flavors:
+        stable:
+            app:
+                name: 'Noctua'
+            android:
+                applicationId: 'dev.nploetz.noctua'
+            ios:
+                bundleId: 'dev.nploetz.noctua'
+            macos:
+                bundleId: 'dev.nploetz.noctua'
+            linux:
+                applicationId: 'dev.nploetz.noctua'
+            windows: {}
+        beta:
+            app:
+                name: 'Noctua Beta'
+            android:
+                applicationId: 'dev.nploetz.noctua.beta'
+            ios:
+                bundleId: 'dev.nploetz.noctua.beta'
+            macos:
+                bundleId: 'dev.nploetz.noctua.beta'
+            linux:
+                applicationId: 'dev.nploetz.noctua.beta'
+            windows: {}
+    instructions:
+        - android:androidManifest # android:label="@string/app_name", set per flavor
+        - android:flavorizrGradle # writes android/app/flavorizr.gradle.kts
+        - android:buildGradle # applies it from build.gradle.kts
+        - flutter:flavors # writes lib/flavors.dart (enum Flavor, class F)

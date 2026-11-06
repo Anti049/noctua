@@ -1,0 +1,21 @@
+include: package:flutter_lints/flutter.yaml
+
+formatter:
+    page_width: 140
+
+analyzer:
+    exclude:
+        - '**/*.g.dart'
+        - '**/*.gr.dart'
+        - '**/*.freezed.dart'
+        - lib/flavors.dart
+        - build/**
+        - android/**
+        - windows/**
+
+linter:
+    rules:
+        prefer_const_constructors: true
+        prefer_single_quotes: true
+        always_use_package_imports: true
+        directives_ordering: true
