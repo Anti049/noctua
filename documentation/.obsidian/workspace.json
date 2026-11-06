@@ -1,0 +1,232 @@
+{
+  "main": {
+    "id": "d20534bae303ab43",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce449e7eacab5a29",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ab59061ed3218d4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Setup Guide/Milestone 02 - Release pipeline for beta and stable.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Milestone 02 - Release pipeline for beta and stable"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cc76c4921f27a590",
+    "type": "split",
+    "children": [
+      {
+        "id": "e2bd002036d2433d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bebdfd2f3362a0f6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5615d353664afba4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "bc7af38b5a6d4c15",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c0eb4dfcda6eece4",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e29047dbab8e752",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9855ee80a05812a5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b252a2b13ea7a7cf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "3cb175734878daad",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "af930d472588ba05",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "da0213bdff17bfa5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "copilot:Open Copilot Agent Chat": false
+    }
+  },
+  "active": "ab59061ed3218d4b",
+  "lastOpenFiles": [
+    "Setup Guide/Milestone 01 - Project setup and the folder structure.md",
+    "Setup Guide/attachments/noctua-m03-updates.png",
+    "Setup Guide/attachments/noctua-m07-work-details.png",
+    "Setup Guide/attachments/noctua-m06-library-layouts.png",
+    "Setup Guide/attachments/noctua-m06-library-filters.png",
+    "Setup Guide/attachments/noctua-m05-theming.png",
+    "Setup Guide/attachments/noctua-m02-launcher-icons.png",
+    "Setup Guide/00 Index.md",
+    "Setup Guide/01 Overview.md",
+    "Setup Guide/Milestone 03 - In-app updates.md",
+    "Setup Guide/Milestone 02 - Release pipeline for beta and stable.md",
+    "Setup Guide/02 Architecture.md",
+    "Setup Guide/attachments/noctua-m13-eink-errors.png",
+    "Setup Guide/attachments/noctua-m09-tabs.png",
+    "Setup Guide/attachments/noctua-m08-reader.png",
+    "Setup Guide/attachments/noctua-m13-tablet.png",
+    "Setup Guide/attachments",
+    "Setup Guide/Release checklist and next steps.md",
+    "Setup Guide/Milestone 14 - The full test suite.md",
+    "Setup Guide/Milestone 13 - Errors, tablets and e-ink.md",
+    "Setup Guide/Milestone 12 - Onboarding.md",
+    "Setup Guide/Milestone 11 - Accounts and sync.md",
+    "Setup Guide/Milestone 10 - Settings.md",
+    "Setup Guide/Milestone 09 - Updates, History, Browse and sources.md",
+    "Setup Guide/Milestone 08 - The reader and open works.md",
+    "Setup Guide/Milestone 07 - Work details.md",
+    "Setup Guide/Milestone 06 - The library.md",
+    "Setup Guide/Milestone 05 - Theming and the app shell.md",
+    "Setup Guide/Milestone 04 - Preferences and the local database.md",
+    "Setup Guide/Milestone 01 ΓÇô Project setup and the folder structure.md",
+    "Welcome.md",
+    "Setup Guide/Milestone 14 ΓÇô The full test suite.md",
+    "Setup Guide/Milestone 13 ΓÇô Errors, tablets and e-ink.md",
+    "Setup Guide/Milestone 12 ΓÇô Onboarding.md",
+    "Setup Guide/Milestone 11 ΓÇô Accounts and sync.md",
+    "Setup Guide/Milestone 10 ΓÇô Settings.md",
+    "Setup Guide"
+  ]
+}
