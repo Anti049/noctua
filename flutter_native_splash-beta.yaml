@@ -1,18 +1,14 @@
 # Splash screen for the beta flavor: dart run flutter_native_splash:create --flavors stable,beta
 # The logo with the system theme behind it: Catppuccin Latte in light mode, Mocha in dark mode.
 flutter_native_splash:
-  color: "#EFF1F5"
-  image: assets/branding/splash_beta_legacy.png
-  branding: assets/branding/wordmark_beta_light.png
-  color_dark: "#1E1E2E"
-  image_dark: assets/branding/splash_beta_legacy.png
-  branding_dark: assets/branding/wordmark_beta_dark.png
-  android_12:
-    color: "#EFF1F5"
-    image: assets/branding/splash_beta.png
-    branding: assets/branding/wordmark_beta_light.png
-    color_dark: "#1E1E2E"
-    image_dark: assets/branding/splash_beta.png
-    branding_dark: assets/branding/wordmark_beta_dark.png
-  ios: false
-  web: false
+    color: '#EFF1F5'
+    image: assets/branding/splash_beta_legacy.png
+    color_dark: '#1E1E2E'
+    image_dark: assets/branding/splash_beta_legacy.png
+    android_12:
+        color: '#EFF1F5'
+        image: assets/branding/splash_beta.png
+        color_dark: '#1E1E2E'
+        image_dark: assets/branding/splash_beta.png
+    ios: false
+    web: false
