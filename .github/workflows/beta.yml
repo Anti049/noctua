@@ -49,6 +49,8 @@ jobs:
 
   build:
     needs: tag
+    permissions:
+      contents: write   # the called workflow creates the GitHub release
     uses: ./.github/workflows/build-android.yml
     with:
       tag: ${{ needs.tag.outputs.tag }}
