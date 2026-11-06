@@ -1,0 +1,18 @@
+# Stable channel: merge develop into main, then push a tag like v0.7.0 on main.
+# Publishes the latest GitHub release of "Noctua" (app id dev.noctua.noctua).
+# Afterwards, bump the version in pubspec.yaml on develop (e.g. 0.8.0) so new betas count from there.
+name: Stable release
+
+on:
+  push:
+    tags: ['v*', '!v*-*']
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-android.yml
+    with:
+      tag: ${{ github.ref_name }}
+      # The beta flavor too, so testers on Noctua Beta update onto every stable release.
+      flavors: stable beta
+      prerelease: false
+    secrets: inherit

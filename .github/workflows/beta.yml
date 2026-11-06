@@ -1,0 +1,57 @@
+# Beta channel: every push to develop becomes a beta. The version comes from
+# pubspec.yaml (the next stable release, e.g. 0.7.0) and the beta number counts
+# up from the last beta of that version: v0.7.0-beta.1, -beta.2, …
+# Testers' Noctua Beta apps find each one through the in-app updater.
+name: Beta release
+
+on:
+  push:
+    branches: [develop]
+    paths-ignore: ['**.md', 'docs/**']
+  workflow_dispatch:
+
+# One beta at a time, in push order, so two pushes never claim the same number.
+concurrency:
+  group: beta-release
+  cancel-in-progress: false
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # push the beta tag
+    outputs:
+      tag: ${{ steps.next.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Next beta tag
+        id: next
+        run: |
+          base=$(sed -nE 's/^version:[[:space:]]*([0-9]+\.[0-9]+\.[0-9]+).*/\1/p' pubspec.yaml)
+          [[ -n "$base" ]] || { echo "::error::No version: line in pubspec.yaml"; exit 1; }
+          # The pubspec version is the release develop is working towards; it must be newer than the last stable tag.
+          latest=$(git tag -l 'v*' | grep -vE -- '-' | sed 's/^v//' | sort -V | tail -1)
+          if [[ -n "$latest" ]] && [[ "$(printf '%s\n%s\n' "$latest" "$base" | sort -V | tail -1)" == "$latest" ]]; then
+            echo "::error::pubspec.yaml says $base but v$latest is already released. Bump the version on develop."; exit 1
+          fi
+          last=$(git tag -l "v$base-beta.*" | sed -E 's/.*-beta\.//' | sort -n | tail -1)
+          n=$(( ${last:-0} + 1 ))
+          (( n <= 998 )) || { echo "::error::998 betas of $base. Bump the version."; exit 1; }
+          tag="v$base-beta.$n"
+          git tag "$tag" "$GITHUB_SHA"
+          git push origin "$tag"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "Beta $tag from $(git log -1 --format=%h)" >> "$GITHUB_STEP_SUMMARY"
+
+  build:
+    needs: tag
+    uses: ./.github/workflows/build-android.yml
+    with:
+      tag: ${{ needs.tag.outputs.tag }}
+      flavors: beta
+      prerelease: true
+    secrets: inherit
