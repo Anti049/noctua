@@ -65,7 +65,7 @@ class _AppUpdatePageState extends ConsumerState<AppUpdatePage> {
     } else {
       body = switch (check) {
         AsyncError(:final error) => [
-          header('Couldn’t check for updates', installed, Symbols.cloud_off_rounded),
+          header("Couldn't check for updates", installed, Symbols.cloud_off_rounded),
           const SizedBox(height: 16),
           Text('$error', style: context.text.bodyMedium),
           const SizedBox(height: 16),
