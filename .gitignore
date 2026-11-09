@@ -21,3 +21,4 @@ android/key.properties
 *.g.dart
 *.gr.dart
 *.freezed.dart
+documentation/.obsidian/workspace.json
