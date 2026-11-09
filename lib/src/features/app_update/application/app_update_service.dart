@@ -33,5 +33,7 @@ class AppUpdateService {
   Future<void> cancelInstall() => ref.read(apkInstallerProvider).cancel();
 }
 
-@riverpod
+/// Kept alive: callers only `ref.read` it, so an auto-dispose provider would be
+/// disposed mid-`await` and the service's [Ref] would throw on its next use.
+@Riverpod(keepAlive: true)
 AppUpdateService appUpdateService(Ref ref) => AppUpdateService(ref);
