@@ -6,7 +6,6 @@ import 'package:noctua/src/core/router/app_router.gr.dart';
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    // TODO: Add routes
     AutoRoute(
       page: HomeShellRoute.page,
       initial: true,
@@ -33,5 +32,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(path: 'more', page: MoreRoute.page),
       ],
     ),
+    AutoRoute(path: '/app-update', page: AppUpdateRoute.page),
+    AutoRoute(path: '/changelog', page: ChangelogRoute.page),
   ];
 }

@@ -6,8 +6,9 @@ import 'package:noctua/flavors.dart';
 import 'package:noctua/src/app.dart';
 import 'package:noctua/src/core/router/app_router.dart';
 import 'package:noctua/src/core/router/crash_guard.dart';
+import 'package:noctua/src/features/app_update/data/installed_app_reader.dart';
 
-void main() {
+void main() async {
   // Ensure Flutter bindings are initialized
   final binding = WidgetsFlutterBinding.ensureInitialized();
 
@@ -24,7 +25,8 @@ void main() {
 
   // TODO: Load the dynamic theme before the first frame
 
-  // TODO Get installed application information
+  // Get installed application information
+  final installed = await readInstalledApp();
 
   final router = AppRouter();
   CrashGuard.install(router);
@@ -33,7 +35,8 @@ void main() {
   runApp(
     ProviderScope(
       overrides: [
-        // TODO: Add providers
+        // Override the installed app provider with the actual installed app information
+        installedAppProvider.overrideWithValue(installed),
       ],
       child: NoctuaApp(router: router),
     ),
